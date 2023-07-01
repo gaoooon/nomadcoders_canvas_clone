@@ -7,27 +7,34 @@
     <title>Document</title>
   </head>
   <body>
-    <canvas></canvas>
-    <input id="line-width" type="range" max="10" min="1" value="5" step="1"> <!-- step은 증가나 감소되는 정도를 정할수 있다 -->
-    <input type="color" id="color">
-    <div class="flex">
-      <div class="color-option" style="background-color: #eb3b5a;" data-color="#eb3b5a"></div>
-      <div class="color-option" style="background-color: #fa8231;" data-color="#fa8231"></div>
-      <div class="color-option" style="background-color: #f7b731;" data-color="#f7b731"></div>
-      <div class="color-option" style="background-color: #20bf6b;" data-color="#20bf6b"></div>
-      <div class="color-option" style="background-color: #0fb9b1;" data-color="#0fb9b1"></div>
-      <div class="color-option" style="background-color: #2d98da;" data-color="#2d98da"></div>
-      <div class="color-option" style="background-color: #3867d6;" data-color="#3867d6"></div>
-      <div class="color-option" style="background-color: #8854d0;" data-color="#8854d0"></div>
-      <div class="color-option" style="background-color: #a5b1c2;" data-color="#a5b1c2"></div>
-      <div class="color-option" style="background-color: #4b6584;" data-color="#4b6584"></div>
+    <div id="canvas">
+      <div class="flex">
+        <input class="deco" type="color" id="color" value="white">
+        <div class="color-option" style="background-color: #eb3b5a;" data-color="#eb3b5a"></div>
+        <div class="color-option" style="background-color: #fa8231;" data-color="#fa8231"></div>
+        <div class="color-option" style="background-color: #f7b731;" data-color="#f7b731"></div>
+        <div class="color-option" style="background-color: #20bf6b;" data-color="#20bf6b"></div>
+        <div class="color-option" style="background-color: #0fb9b1;" data-color="#0fb9b1"></div>
+        <div class="color-option" style="background-color: #2d98da;" data-color="#2d98da"></div>
+        <div class="color-option" style="background-color: #3867d6;" data-color="#3867d6"></div>
+        <div class="color-option" style="background-color: #8854d0;" data-color="#8854d0"></div>
+        <div class="color-option" style="background-color: #a5b1c2;" data-color="#a5b1c2"></div>
+        <div class="color-option" style="background-color: #4b6584;" data-color="#4b6584"></div>
+      </div>
+      <canvas></canvas>
+      <div class="btns">
+        <input id="line-width" type="range" max="10" min="1" value="5" step="1"> <!-- step은 증가나 감소되는 정도를 정할수 있다 -->
+        <button id="mode-btn">🖊 Draw</button>
+        <button id="destroy-btn">💣 Destroy</button>
+        <button id="eraser-btn">❌ Eraser</button>
+        <label for="file"> 📄 Add Photo
+          <input type="file" accept="image/*" id="file">
+        </label>
+        <input type="text" placeholder="write anything" id="text">
+        <button id="save">📁 Save Image</button>
+      </div>
     </div>
-    <button id="mode-btn">Draw</button>
-    <button id="destroy-btn">Destroy</button>
-    <button id="eraser-btn">Eraser</button>
-    <input type="file" accept="image/*" id="file">
-    <input type="text" placeholder="write and then double click" id="text" value="tarfdffdfd">
-    <button id="save">Save Image</button>
-    <script src="app.js"></script>
-  </body>
-</html>
+      <script src="app.js"></script>
+    </body>
+    </html>
+    
